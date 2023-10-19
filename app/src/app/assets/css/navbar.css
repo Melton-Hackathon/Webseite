@@ -1,0 +1,60 @@
+/* Stil für das Navigationsmenü innerhalb eines <nav>-Elements */
+nav {
+    background-color: #333; /* Hintergrundfarbe des Menüs */
+    color: #fff; /* Textfarbe im Menü */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Stil für das Logo im Navigationsmenü */
+.nav-logo h2 {
+    text-decoration: none;
+    color: #740c6b; /* Textfarbe der Links */
+    font-weight: bold; /* Schriftstärke der Links */
+    font-size: 30px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Stil für die Navigationslinks */
+.navlink-container {
+    display: flex;
+    gap: 20px; /* Abstand zwischen den Links */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #fff; /* Textfarbe der Links */
+    font-weight: bold; /* Schriftstärke der Links */
+}
+
+.nav-item:hover {
+    text-decoration: underline; /* Unterstreichung der Links bei Hover */
+}
+
+/* Stil für den Login-Link */
+.nav-login > a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #740c6b; /* Hintergrundfarbe des Login-Links */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-login > a:hover {
+    background-color: #8d0f83; /* Hintergrundfarbe bei Hover */
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}

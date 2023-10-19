@@ -29,8 +29,13 @@ const checkLogin = () => {
 export default function Navbar() {
     return (
         <nav>
-            <Navbar_links config={navlinkConfig} />
-            <div>
+            <div className="nav-container">
+                <a href="/" className="nav-logo">
+                    <h2>Melton</h2>
+                </a>
+                <Navbar_links config={navlinkConfig} />
+            </div>
+            <div className="nav-login">
                 {
                     checkLogin() ? <a href="/profile">Profile</a> : <a href="/login">Login</a>
                 }
