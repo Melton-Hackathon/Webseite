@@ -2,11 +2,8 @@
 import Navbar_links from "./Navbar_links"
 
 const navlinkConfig = {
+    baseView: "/pages",
     navlinks: [
-        {
-            name: "Home",
-            href: "/",
-        },
         {
             name: "Stats",
             href: "/stats"
@@ -37,7 +34,7 @@ export default function Navbar() {
             </div>
             <div className="nav-login">
                 {
-                    checkLogin() ? <a href="/profile">Profile</a> : <a href="/login">Login</a>
+                    checkLogin() ? <a href="/pages/profile">Profile</a> : <a href="/pages/profile/login">Login</a>
                 }
             </div>
         </nav>

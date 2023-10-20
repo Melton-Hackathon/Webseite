@@ -1,60 +1,51 @@
-/* Stil für das Navigationsmenü innerhalb eines <nav>-Elements */
-nav {
-    background-color: #333; /* Hintergrundfarbe des Menüs */
-    color: #fff; /* Textfarbe im Menü */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-/* Stil für das Logo im Navigationsmenü */
-.nav-logo h2 {
-    text-decoration: none;
-    color: #740c6b; /* Textfarbe der Links */
-    font-weight: bold; /* Schriftstärke der Links */
-    font-size: 30px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.nav-container{
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-/* Stil für die Navigationslinks */
-.navlink-container {
-    display: flex;
-    gap: 20px; /* Abstand zwischen den Links */
-}
-
-.nav-item {
-    text-decoration: none;
-    color: #fff; /* Textfarbe der Links */
-    font-weight: bold; /* Schriftstärke der Links */
-}
-
-.nav-item:hover {
-    text-decoration: underline; /* Unterstreichung der Links bei Hover */
-}
-
-/* Stil für den Login-Link */
-.nav-login > a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    background-color: #740c6b; /* Hintergrundfarbe des Login-Links */
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.nav-login > a:hover {
-    background-color: #8d0f83; /* Hintergrundfarbe bei Hover */
-    text-decoration: none;
-}
-
-a{
-    text-decoration: none;
-}
+/* Stil für den Header */
+header {
+    background-color: #333; /* Hintergrundfarbe des Headers */
+    color: #fff; /* Textfarbe im Header */
+    padding: 10px 0; /* Innenabstand oben/unten 10px, links/rechts 0 */
+  }
+  
+  /* Stil für das Navigationsmenü */
+  nav {
+    display: flex; /* Elemente im Navigationsmenü nebeneinander anordnen */
+    justify-content: space-between; /* Inhalt im Navigationsmenü gleichmäßig verteilen */
+    align-items: center; /* Elemente vertikal zentrieren */
+    max-width: 1200px; /* Maximale Breite des Navigationsmenüs */
+    margin: 0 auto; /* Zentriert das Navigationsmenü horizontal */
+    padding: 0 20px; /* Innenabstand oben/unten 0, links/rechts 20px */
+  }
+  
+  /* Stil für das Logo */
+  .nav-logo {
+    text-decoration: none; /* Entfernt die unterstrichene Textdekoration */
+  }
+  
+  .nav-logo h2 {
+    margin: 0; /* Entfernt den oberen und unteren Abstand des H2-Elements */
+    font-size: 24px; /* Schriftgröße des Logos */
+  }
+  
+  /* Stil für die Navigationslinks */
+  .navlink-container {
+    display: flex; /* Elemente in der Navigationslink-Container nebeneinander anordnen */
+    gap: 20px; /* Abstand zwischen den Navigationslinks */
+  }
+  
+  .nav-item {
+    text-decoration: none; /* Entfernt die unterstrichene Textdekoration */
+    color: #fff; /* Textfarbe der Navigationslinks */
+    font-size: 16px; /* Schriftgröße der Navigationslinks */
+  }
+  
+  /* Stil für den Login-Link */
+  .nav-login a {
+    text-decoration: none; /* Entfernt die unterstrichene Textdekoration */
+    color: #fff; /* Textfarbe des Login-Links */
+    font-weight: bold; /* Fettschrift für den Login-Link */
+  }
+  
+  /* Stil für Hover-Effekte (z.B., wenn der Mauszeiger über einem Link schwebt) */
+  .nav-item:hover, .nav-login a:hover {
+    text-decoration: underline; /* Unterstrichenen Text hinzufügen */
+  }
+  
