@@ -1,6 +1,6 @@
 export default class RequestClass {
     constructor(baseURL) {
-        this.baseURL = baseURL || 'http://10.2.2.11:3000';
+        this.baseURL = baseURL || 'https://melton.wicki.sbs';
     }
 
     async sendRequest(method, endpoint, data = null) {
@@ -18,18 +18,70 @@ export default class RequestClass {
             requestOptions.body = JSON.stringify(data);
         }
 
-        try {
-            const response = await fetch(url, requestOptions);
-            if (!response.ok) {
-                throw new Error(`Request failed with status ${response.status}`);
+        console.log(requestOptions)
+
+
+        if (method === 'POST') {
+            try {
+                return await fetch(this.baseURL + endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)  // Modify this based on your requirement
+                }).then(response => response.json())
+                    .then(data => { return data })
+                    .catch(error => console.error('Error:', error));
+            } catch (error) {
+                throw new Error(`Request error: ${error.message}`);
             }
-            return await response.json();
-        } catch (error) {
+        } else if (method === 'GET') {
+            try {
+                return await fetch(this.baseURL + endpoint, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                }).then(response => response.json())
+                    .then(data => { return data })
+                    .catch(error => console.error('Error:', error));
+            } catch (error) {
+                throw new Error(`Request error: ${error.message}`);
+            }
+        } else if (method === 'PUT') {
+            try {
+                return await fetch(this.baseURL + endpoint, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(yourDataObject) // Ersetzen Sie 'yourDataObject' durch die Daten, die Sie senden möchten
+                }).then(response => response.json())
+                    .then(data => { return data })
+                    .catch(error => console.error('Error:', error));
+
+            } catch (error) {
+                throw new Error(`Request error: ${error.message}`);
+            }
+        } else if (method === 'DELETE') {
+            try {
+                return await fetch(this.baseURL + endpoint, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(response => response.json())
+                    .then(data => { return data })
+                    .catch(error => console.error('Error:', error));
+            } catch (error) {
+                throw new Error(`Request error: ${error.message}`);
+            }
+        } else {
             throw new Error(`Request error: ${error.message}`);
         }
     }
 
-    async create(endpoint, data) {
+    create(endpoint, data) {
         return this.sendRequest('POST', endpoint, data);
     }
 

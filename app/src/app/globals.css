@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,13 +12,50 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
-  background-color:#333;
+  background: linear-gradient(-30deg, #ff64f2 0%, #ffffff 100%);
+
+  height: 100vh;
 }
 
 main{
-  width: 1200px;
+  max-width: 75%;
   margin: 0 auto;
-  padding-top: 3rem;
-  
+  padding: 1rem;
+  margin-bottom: 3rem;
+  background-color: #ffffffa4;
+  border-radius: 15px;
+}
+
+#landing-page-main{
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  background-color: #ffffff00;
+}
+
+#landing-page-main > div{
+  display: flex;
+}
+
+.info-text{
+  margin-top: 6%;
+  margin-right: 2%;
+}
+
+.info-text > button{
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff64f2;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }

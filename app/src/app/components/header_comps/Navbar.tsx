@@ -1,3 +1,5 @@
+"use client"
+
 //Import components
 import Navbar_links from "./Navbar_links"
 
@@ -6,15 +8,18 @@ const navlinkConfig = {
     navlinks: [
         {
             name: "Stats",
-            href: "/stats"
+            href: "/stats",
+            peremissions: 'all'
         },
         {
             name: "What is melton?",
-            href: "/wim_static"
+            href: "/wim_static",
+            peremissions: 'all'
         },
         {
             name: "About",
-            href: "/about"
+            href: "/about",
+            peremissions: 'all'
         }
     ]
 }

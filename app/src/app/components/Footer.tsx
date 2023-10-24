@@ -15,9 +15,9 @@ const Footer = () => {
       </div>
 
       <nav className="footer-nav">
-        <a href="/impressum">Impressum</a>
-        <a href="/datenschutz">Datenschutz</a>
-        <a href="/agb">AGB</a>
+        <a href="/pages/rights/impressum">Impressum</a>
+        <a href="/pages/rights/datarights">Datenschutz</a>
+        <a href="/pages/rights/agb">AGB</a>
       </nav>
     </footer>
   )

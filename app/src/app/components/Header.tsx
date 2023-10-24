@@ -1,5 +1,7 @@
+"use client"
+
 //Import components
-import Navbar from './header_comps/Navbar.tsx'
+import Navbar from './header_comps/Navbar'
 
 export default function Header (){
     return(

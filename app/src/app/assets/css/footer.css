@@ -1,17 +1,18 @@
 /* CSS für den Footer */
 footer {
-    background-color: #222;
-    /* Neuer Hintergrund */
-    color: #fff;
-    padding: 20px 15rem;
     display: flex;
-    justify-content: space-between;
-
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #33333300;
+    color: #757575;
+    padding: 1.5rem;
 }
 
 /* Stil für Links im Footer */
 footer a {
-    color: #fff;
+    color: #757575;
     text-decoration: none;
     font-size: 14px;
 }
@@ -24,33 +25,25 @@ footer h2 {
 .contact-info {
     display: flex;
     flex-direction: column;
-    /* Vertikale Anordnung */
     gap: 0.1rem;
-    /* Abstand zwischen den Elementen */
 }
 
-/* Stil für unter kategorieen */
-.contact-info > h4{
+/* Stil für unter Kategorien */
+.contact-info>h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    border-bottom: 1px #111111 solid;
+    border-bottom: 1px #8b019d solid;
 }
 
 /* Stil für das zweite Navigationsmenü im Footer */
 .footer-nav {
     padding: 10px 20px;
-    /* Abstand anpassen */
     display: flex;
     flex-direction: column;
-    /* Vertikale Anordnung */
-
     align-items: start;
-    /* Links ausrichten */
-
     border-left: 2px #111111 solid;
 }
 
 .footer-nav a {
     margin: 10px 0;
-    /* Vertikaler Abstand zwischen Links */
 }
